@@ -1,3 +1,8 @@
 # affin-backend
- npm install
- npm start
+## First
+
+### `npm install`
+
+Next, you can run:
+
+### `npm start`
