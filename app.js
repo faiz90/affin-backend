@@ -26,8 +26,8 @@ const data = require('./db.json');
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
         if (username == data.username && password == data.password) {
-            const token = jwt.sign({ id: data.id, username: data.username }, 'secretkey', { expiresIn: 10 });
-            const refreshToken = jwt.sign({ id: data.id, username: data.username }, 'secretkey', { expiresIn: 86400 });
+            const token = jwt.sign({ id: data.id, username: data.username }, 'secretkey', { expiresIn: 900 }); //15 minutes
+            const refreshToken = jwt.sign({ id: data.id, username: data.username }, 'secretkey', { expiresIn: 86400 }); //Over Minute
             res.json({
                 sucess: true,
                 err: null,
